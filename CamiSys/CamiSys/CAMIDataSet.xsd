@@ -1,0 +1,1185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CAMIDataSet" targetNamespace="CamiSys" xmlns:mstns="CamiSys" xmlns="CamiSys" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CAMIConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CAMIConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CamiSys.Properties.Settings.GlobalReference.Default.CAMIConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Consulta_ViewTableAdapter" GeneratorDataComponentClassName="Consulta_ViewTableAdapter" Name="Consulta_View" UserDataComponentName="Consulta_ViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CAMIConnectionString (Settings)" DbObjectName="CAMI.dbo.Consulta_View" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Tipo_Consulta, Numero_Factura, Fecha, PrecioTotalConsulta, Historia_Clinica, Paciente_Cedula, Paciente_Telefono, Paciente_Edad, Paciente, Usuario, IdentificadorConsulta FROM Consulta_View</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Tipo_Consulta" DataSetColumn="Tipo_Consulta" />
+              <Mapping SourceColumn="Numero_Factura" DataSetColumn="Numero_Factura" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="PrecioTotalConsulta" DataSetColumn="PrecioTotalConsulta" />
+              <Mapping SourceColumn="Historia_Clinica" DataSetColumn="Historia_Clinica" />
+              <Mapping SourceColumn="Paciente_Cedula" DataSetColumn="Paciente_Cedula" />
+              <Mapping SourceColumn="Paciente_Telefono" DataSetColumn="Paciente_Telefono" />
+              <Mapping SourceColumn="Paciente_Edad" DataSetColumn="Paciente_Edad" />
+              <Mapping SourceColumn="Paciente" DataSetColumn="Paciente" />
+              <Mapping SourceColumn="Usuario" DataSetColumn="Usuario" />
+              <Mapping SourceColumn="IdentificadorConsulta" DataSetColumn="IdentificadorConsulta" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ConsultaTableAdapter" GeneratorDataComponentClassName="ConsultaTableAdapter" Name="Consulta" UserDataComponentName="ConsultaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CAMIConnectionString (Settings)" DbObjectName="CAMI.dbo.Consulta" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Consulta] WHERE (([ID] = @Original_ID) AND ((@IsNull_Tipo_Consulta = 1 AND [Tipo_Consulta] IS NULL) OR ([Tipo_Consulta] = @Original_Tipo_Consulta)) AND ((@IsNull_Numero_Factura = 1 AND [Numero_Factura] IS NULL) OR ([Numero_Factura] = @Original_Numero_Factura)) AND ((@IsNull_Fecha = 1 AND [Fecha] IS NULL) OR ([Fecha] = @Original_Fecha)) AND ((@IsNull_Id_Usuario = 1 AND [Id_Usuario] IS NULL) OR ([Id_Usuario] = @Original_Id_Usuario)) AND ((@IsNull_PrecioTotalConsulta = 1 AND [PrecioTotalConsulta] IS NULL) OR ([PrecioTotalConsulta] = @Original_PrecioTotalConsulta)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Tipo_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tipo_Consulta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Tipo_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tipo_Consulta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Numero_Factura" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Numero_Factura" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Numero_Factura" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Numero_Factura" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Fecha" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Fecha" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Fecha" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Fecha" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Id_Usuario" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Usuario" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_Usuario" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Usuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PrecioTotalConsulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PrecioTotalConsulta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_PrecioTotalConsulta" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="PrecioTotalConsulta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Consulta] ([Tipo_Consulta], [Numero_Factura], [Observaciones], [Fecha], [Id_Usuario], [PrecioTotalConsulta], [Historia_Clinica]) VALUES (@Tipo_Consulta, @Numero_Factura, @Observaciones, @Fecha, @Id_Usuario, @PrecioTotalConsulta, @Historia_Clinica);
+SELECT ID, Tipo_Consulta, Numero_Factura, Observaciones, Fecha, Id_Usuario, PrecioTotalConsulta, Historia_Clinica FROM Consulta WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Tipo_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tipo_Consulta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Numero_Factura" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Numero_Factura" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Observaciones" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Observaciones" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Fecha" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Fecha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_Usuario" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Usuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@PrecioTotalConsulta" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="PrecioTotalConsulta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Historia_Clinica" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Historia_Clinica" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Tipo_Consulta, Numero_Factura, Observaciones, Fecha, Id_Usuario, PrecioTotalConsulta, Historia_Clinica FROM dbo.Consulta</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Consulta] SET [Tipo_Consulta] = @Tipo_Consulta, [Numero_Factura] = @Numero_Factura, [Observaciones] = @Observaciones, [Fecha] = @Fecha, [Id_Usuario] = @Id_Usuario, [PrecioTotalConsulta] = @PrecioTotalConsulta, [Historia_Clinica] = @Historia_Clinica WHERE (([ID] = @Original_ID) AND ((@IsNull_Tipo_Consulta = 1 AND [Tipo_Consulta] IS NULL) OR ([Tipo_Consulta] = @Original_Tipo_Consulta)) AND ((@IsNull_Numero_Factura = 1 AND [Numero_Factura] IS NULL) OR ([Numero_Factura] = @Original_Numero_Factura)) AND ((@IsNull_Fecha = 1 AND [Fecha] IS NULL) OR ([Fecha] = @Original_Fecha)) AND ((@IsNull_Id_Usuario = 1 AND [Id_Usuario] IS NULL) OR ([Id_Usuario] = @Original_Id_Usuario)) AND ((@IsNull_PrecioTotalConsulta = 1 AND [PrecioTotalConsulta] IS NULL) OR ([PrecioTotalConsulta] = @Original_PrecioTotalConsulta)));
+SELECT ID, Tipo_Consulta, Numero_Factura, Observaciones, Fecha, Id_Usuario, PrecioTotalConsulta, Historia_Clinica FROM Consulta WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Tipo_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tipo_Consulta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Numero_Factura" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Numero_Factura" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Observaciones" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Observaciones" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Fecha" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Fecha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_Usuario" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Usuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@PrecioTotalConsulta" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="PrecioTotalConsulta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Historia_Clinica" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Historia_Clinica" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Tipo_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tipo_Consulta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Tipo_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tipo_Consulta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Numero_Factura" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Numero_Factura" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Numero_Factura" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Numero_Factura" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Fecha" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Fecha" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Fecha" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Fecha" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Id_Usuario" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Usuario" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_Usuario" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Usuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PrecioTotalConsulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PrecioTotalConsulta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_PrecioTotalConsulta" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="PrecioTotalConsulta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="CAMI.dbo.Consulta" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Tipo_Consulta" DataSetColumn="Tipo_Consulta" />
+              <Mapping SourceColumn="Numero_Factura" DataSetColumn="Numero_Factura" />
+              <Mapping SourceColumn="Observaciones" DataSetColumn="Observaciones" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="Id_Usuario" DataSetColumn="Id_Usuario" />
+              <Mapping SourceColumn="PrecioTotalConsulta" DataSetColumn="PrecioTotalConsulta" />
+              <Mapping SourceColumn="Historia_Clinica" DataSetColumn="Historia_Clinica" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MedicamentosTableAdapter" GeneratorDataComponentClassName="MedicamentosTableAdapter" Name="Medicamentos" UserDataComponentName="MedicamentosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CAMIConnectionString (Settings)" DbObjectName="CAMI.dbo.Medicamentos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Medicamentos] WHERE (([ID] = @Original_ID) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Precio = 1 AND [Precio] IS NULL) OR ([Precio] = @Original_Precio)) AND ((@IsNull_Comision_PorVenta = 1 AND [Comision_PorVenta] IS NULL) OR ([Comision_PorVenta] = @Original_Comision_PorVenta)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Nombre" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Nombre" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Precio" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Precio" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_Precio" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Precio" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Comision_PorVenta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Comision_PorVenta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_Comision_PorVenta" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Comision_PorVenta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Medicamentos] ([Nombre], [Precio], [Comision_PorVenta]) VALUES (@Nombre, @Precio, @Comision_PorVenta);
+SELECT ID, Nombre, Precio, Comision_PorVenta FROM Medicamentos WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Nombre" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Precio" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Precio" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Comision_PorVenta" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Comision_PorVenta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Nombre, Precio, Comision_PorVenta FROM dbo.Medicamentos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Medicamentos] SET [Nombre] = @Nombre, [Precio] = @Precio, [Comision_PorVenta] = @Comision_PorVenta WHERE (([ID] = @Original_ID) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Precio = 1 AND [Precio] IS NULL) OR ([Precio] = @Original_Precio)) AND ((@IsNull_Comision_PorVenta = 1 AND [Comision_PorVenta] IS NULL) OR ([Comision_PorVenta] = @Original_Comision_PorVenta)));
+SELECT ID, Nombre, Precio, Comision_PorVenta FROM Medicamentos WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Nombre" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Precio" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Precio" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Comision_PorVenta" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Comision_PorVenta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Nombre" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Nombre" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Precio" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Precio" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_Precio" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Precio" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Comision_PorVenta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Comision_PorVenta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_Comision_PorVenta" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Comision_PorVenta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="CAMI.dbo.Medicamentos" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="Precio" DataSetColumn="Precio" />
+              <Mapping SourceColumn="Comision_PorVenta" DataSetColumn="Comision_PorVenta" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Medicamentos_ConsultaTableAdapter" GeneratorDataComponentClassName="Medicamentos_ConsultaTableAdapter" Name="Medicamentos_Consulta" UserDataComponentName="Medicamentos_ConsultaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CAMIConnectionString (Settings)" DbObjectName="CAMI.dbo.Medicamentos_Consulta" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Medicamentos_Consulta] WHERE (([ID] = @Original_ID) AND ((@IsNull_Id_Consulta = 1 AND [Id_Consulta] IS NULL) OR ([Id_Consulta] = @Original_Id_Consulta)) AND ((@IsNull_Id_Medicamento = 1 AND [Id_Medicamento] IS NULL) OR ([Id_Medicamento] = @Original_Id_Medicamento)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Id_Medicamento" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Medicamento" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_Medicamento" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Medicamento" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Medicamentos_Consulta] ([Id_Consulta], [Id_Medicamento]) VALUES (@Id_Consulta, @Id_Medicamento);
+SELECT ID, Id_Consulta, Id_Medicamento FROM Medicamentos_Consulta WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_Medicamento" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Medicamento" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Id_Consulta, Id_Medicamento FROM dbo.Medicamentos_Consulta</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Medicamentos_Consulta] SET [Id_Consulta] = @Id_Consulta, [Id_Medicamento] = @Id_Medicamento WHERE (([ID] = @Original_ID) AND ((@IsNull_Id_Consulta = 1 AND [Id_Consulta] IS NULL) OR ([Id_Consulta] = @Original_Id_Consulta)) AND ((@IsNull_Id_Medicamento = 1 AND [Id_Medicamento] IS NULL) OR ([Id_Medicamento] = @Original_Id_Medicamento)));
+SELECT ID, Id_Consulta, Id_Medicamento FROM Medicamentos_Consulta WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_Medicamento" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Medicamento" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Id_Medicamento" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Medicamento" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_Medicamento" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Medicamento" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="CAMI.dbo.Medicamentos_Consulta" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Id_Consulta" DataSetColumn="Id_Consulta" />
+              <Mapping SourceColumn="Id_Medicamento" DataSetColumn="Id_Medicamento" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PacienteTableAdapter" GeneratorDataComponentClassName="PacienteTableAdapter" Name="Paciente" UserDataComponentName="PacienteTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CAMIConnectionString (Settings)" DbObjectName="CAMI.dbo.Paciente" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Paciente] WHERE (([Cedula] = @Original_Cedula) AND ((@IsNull_Nombres = 1 AND [Nombres] IS NULL) OR ([Nombres] = @Original_Nombres)) AND ((@IsNull_Apellidos = 1 AND [Apellidos] IS NULL) OR ([Apellidos] = @Original_Apellidos)) AND ((@IsNull_Telefono = 1 AND [Telefono] IS NULL) OR ([Telefono] = @Original_Telefono)) AND ((@IsNull_Edad = 1 AND [Edad] IS NULL) OR ([Edad] = @Original_Edad)) AND ((@IsNull_Sexo = 1 AND [Sexo] IS NULL) OR ([Sexo] = @Original_Sexo)) AND ((@IsNull_Id_Consulta = 1 AND [Id_Consulta] IS NULL) OR ([Id_Consulta] = @Original_Id_Consulta)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Cedula" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Cedula" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Nombres" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Nombres" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Nombres" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Nombres" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Apellidos" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Apellidos" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Apellidos" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Apellidos" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Telefono" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Telefono" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Telefono" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Telefono" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Edad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Edad" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Edad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Edad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Sexo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Sexo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Sexo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Sexo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Paciente] ([Cedula], [Nombres], [Apellidos], [Telefono], [Edad], [Sexo], [Id_Consulta]) VALUES (@Cedula, @Nombres, @Apellidos, @Telefono, @Edad, @Sexo, @Id_Consulta);
+SELECT Cedula, Nombres, Apellidos, Telefono, Edad, Sexo, Id_Consulta FROM Paciente WHERE (Cedula = @Cedula)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Cedula" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Cedula" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Nombres" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Nombres" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Apellidos" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Apellidos" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Telefono" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Telefono" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Edad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Edad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Sexo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Sexo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Cedula, Nombres, Apellidos, Telefono, Edad, Sexo, Id_Consulta FROM dbo.Paciente</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Paciente] SET [Cedula] = @Cedula, [Nombres] = @Nombres, [Apellidos] = @Apellidos, [Telefono] = @Telefono, [Edad] = @Edad, [Sexo] = @Sexo, [Id_Consulta] = @Id_Consulta WHERE (([Cedula] = @Original_Cedula) AND ((@IsNull_Nombres = 1 AND [Nombres] IS NULL) OR ([Nombres] = @Original_Nombres)) AND ((@IsNull_Apellidos = 1 AND [Apellidos] IS NULL) OR ([Apellidos] = @Original_Apellidos)) AND ((@IsNull_Telefono = 1 AND [Telefono] IS NULL) OR ([Telefono] = @Original_Telefono)) AND ((@IsNull_Edad = 1 AND [Edad] IS NULL) OR ([Edad] = @Original_Edad)) AND ((@IsNull_Sexo = 1 AND [Sexo] IS NULL) OR ([Sexo] = @Original_Sexo)) AND ((@IsNull_Id_Consulta = 1 AND [Id_Consulta] IS NULL) OR ([Id_Consulta] = @Original_Id_Consulta)));
+SELECT Cedula, Nombres, Apellidos, Telefono, Edad, Sexo, Id_Consulta FROM Paciente WHERE (Cedula = @Cedula)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Cedula" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Cedula" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Nombres" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Nombres" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Apellidos" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Apellidos" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Telefono" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Telefono" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Edad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Edad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Sexo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Sexo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Cedula" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Cedula" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Nombres" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Nombres" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Nombres" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Nombres" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Apellidos" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Apellidos" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Apellidos" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Apellidos" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Telefono" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Telefono" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Telefono" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Telefono" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Edad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Edad" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Edad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Edad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Sexo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Sexo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Sexo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Sexo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Cedula" DataSetColumn="Cedula" />
+              <Mapping SourceColumn="Nombres" DataSetColumn="Nombres" />
+              <Mapping SourceColumn="Apellidos" DataSetColumn="Apellidos" />
+              <Mapping SourceColumn="Telefono" DataSetColumn="Telefono" />
+              <Mapping SourceColumn="Edad" DataSetColumn="Edad" />
+              <Mapping SourceColumn="Sexo" DataSetColumn="Sexo" />
+              <Mapping SourceColumn="Id_Consulta" DataSetColumn="Id_Consulta" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Paciente_AgendaTableAdapter" GeneratorDataComponentClassName="Paciente_AgendaTableAdapter" Name="Paciente_Agenda" UserDataComponentName="Paciente_AgendaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CAMIConnectionString (Settings)" DbObjectName="CAMI.dbo.Paciente_Agenda" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Paciente_Agenda] WHERE (([ID] = @Original_ID) AND ((@IsNull_Observacion = 1 AND [Observacion] IS NULL) OR ([Observacion] = @Original_Observacion)) AND ((@IsNull_Fecha_Reconsulta = 1 AND [Fecha_Reconsulta] IS NULL) OR ([Fecha_Reconsulta] = @Original_Fecha_Reconsulta)) AND ((@IsNull_Fecha_Notificacion = 1 AND [Fecha_Notificacion] IS NULL) OR ([Fecha_Notificacion] = @Original_Fecha_Notificacion)) AND ((@IsNull_Id_Paciente = 1 AND [Id_Paciente] IS NULL) OR ([Id_Paciente] = @Original_Id_Paciente)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Observacion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Observacion" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Observacion" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Observacion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Fecha_Reconsulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Fecha_Reconsulta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Fecha_Reconsulta" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Fecha_Reconsulta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Fecha_Notificacion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Fecha_Notificacion" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Fecha_Notificacion" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Fecha_Notificacion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Id_Paciente" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Paciente" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Id_Paciente" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Id_Paciente" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Paciente_Agenda] ([Observacion], [Fecha_Reconsulta], [Fecha_Notificacion], [Id_Paciente]) VALUES (@Observacion, @Fecha_Reconsulta, @Fecha_Notificacion, @Id_Paciente);
+SELECT ID, Observacion, Fecha_Reconsulta, Fecha_Notificacion, Id_Paciente FROM Paciente_Agenda WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Observacion" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Observacion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Fecha_Reconsulta" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Fecha_Reconsulta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Fecha_Notificacion" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Fecha_Notificacion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Id_Paciente" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Id_Paciente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Observacion, Fecha_Reconsulta, Fecha_Notificacion, Id_Paciente FROM dbo.Paciente_Agenda</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Paciente_Agenda] SET [Observacion] = @Observacion, [Fecha_Reconsulta] = @Fecha_Reconsulta, [Fecha_Notificacion] = @Fecha_Notificacion, [Id_Paciente] = @Id_Paciente WHERE (([ID] = @Original_ID) AND ((@IsNull_Observacion = 1 AND [Observacion] IS NULL) OR ([Observacion] = @Original_Observacion)) AND ((@IsNull_Fecha_Reconsulta = 1 AND [Fecha_Reconsulta] IS NULL) OR ([Fecha_Reconsulta] = @Original_Fecha_Reconsulta)) AND ((@IsNull_Fecha_Notificacion = 1 AND [Fecha_Notificacion] IS NULL) OR ([Fecha_Notificacion] = @Original_Fecha_Notificacion)) AND ((@IsNull_Id_Paciente = 1 AND [Id_Paciente] IS NULL) OR ([Id_Paciente] = @Original_Id_Paciente)));
+SELECT ID, Observacion, Fecha_Reconsulta, Fecha_Notificacion, Id_Paciente FROM Paciente_Agenda WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Observacion" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Observacion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Fecha_Reconsulta" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Fecha_Reconsulta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Fecha_Notificacion" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Fecha_Notificacion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Id_Paciente" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Id_Paciente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Observacion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Observacion" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Observacion" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Observacion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Fecha_Reconsulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Fecha_Reconsulta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Fecha_Reconsulta" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Fecha_Reconsulta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Fecha_Notificacion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Fecha_Notificacion" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Fecha_Notificacion" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Fecha_Notificacion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Id_Paciente" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Paciente" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Id_Paciente" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Id_Paciente" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="CAMI.dbo.Paciente_Agenda" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Observacion" DataSetColumn="Observacion" />
+              <Mapping SourceColumn="Fecha_Reconsulta" DataSetColumn="Fecha_Reconsulta" />
+              <Mapping SourceColumn="Fecha_Notificacion" DataSetColumn="Fecha_Notificacion" />
+              <Mapping SourceColumn="Id_Paciente" DataSetColumn="Id_Paciente" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Paciente_ConsultaTableAdapter" GeneratorDataComponentClassName="Paciente_ConsultaTableAdapter" Name="Paciente_Consulta" UserDataComponentName="Paciente_ConsultaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CAMIConnectionString (Settings)" DbObjectName="CAMI.dbo.Paciente_Consulta" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Paciente_Consulta] WHERE (([ID] = @Original_ID) AND ([Id_Paciente] = @Original_Id_Paciente) AND ([Id_Consulta] = @Original_Id_Consulta))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Id_Paciente" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Id_Paciente" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Paciente_Consulta] ([Id_Paciente], [Id_Consulta]) VALUES (@Id_Paciente, @Id_Consulta);
+SELECT ID, Id_Paciente, Id_Consulta FROM Paciente_Consulta WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Id_Paciente" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Id_Paciente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Id_Paciente, Id_Consulta FROM dbo.Paciente_Consulta</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Paciente_Consulta] SET [Id_Paciente] = @Id_Paciente, [Id_Consulta] = @Id_Consulta WHERE (([ID] = @Original_ID) AND ([Id_Paciente] = @Original_Id_Paciente) AND ([Id_Consulta] = @Original_Id_Consulta));
+SELECT ID, Id_Paciente, Id_Consulta FROM Paciente_Consulta WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Id_Paciente" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Id_Paciente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Id_Paciente" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Id_Paciente" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="CAMI.dbo.Paciente_Consulta" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Id_Paciente" DataSetColumn="Id_Paciente" />
+              <Mapping SourceColumn="Id_Consulta" DataSetColumn="Id_Consulta" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProcederesTableAdapter" GeneratorDataComponentClassName="ProcederesTableAdapter" Name="Procederes" UserDataComponentName="ProcederesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CAMIConnectionString (Settings)" DbObjectName="CAMI.dbo.Procederes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Procederes] WHERE (([ID] = @Original_ID) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Precio = 1 AND [Precio] IS NULL) OR ([Precio] = @Original_Precio)) AND ((@IsNull_Comision_PorVenta = 1 AND [Comision_PorVenta] IS NULL) OR ([Comision_PorVenta] = @Original_Comision_PorVenta)) AND ((@IsNull_Id_Consulta = 1 AND [Id_Consulta] IS NULL) OR ([Id_Consulta] = @Original_Id_Consulta)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Nombre" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Nombre" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Precio" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Precio" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_Precio" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Precio" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Comision_PorVenta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Comision_PorVenta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_Comision_PorVenta" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Comision_PorVenta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Procederes] ([Nombre], [Precio], [Comision_PorVenta], [Id_Consulta]) VALUES (@Nombre, @Precio, @Comision_PorVenta, @Id_Consulta);
+SELECT ID, Nombre, Precio, Comision_PorVenta, Id_Consulta FROM Procederes WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Nombre" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Precio" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Precio" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Comision_PorVenta" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Comision_PorVenta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Nombre, Precio, Comision_PorVenta, Id_Consulta FROM dbo.Procederes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Procederes] SET [Nombre] = @Nombre, [Precio] = @Precio, [Comision_PorVenta] = @Comision_PorVenta, [Id_Consulta] = @Id_Consulta WHERE (([ID] = @Original_ID) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Precio = 1 AND [Precio] IS NULL) OR ([Precio] = @Original_Precio)) AND ((@IsNull_Comision_PorVenta = 1 AND [Comision_PorVenta] IS NULL) OR ([Comision_PorVenta] = @Original_Comision_PorVenta)) AND ((@IsNull_Id_Consulta = 1 AND [Id_Consulta] IS NULL) OR ([Id_Consulta] = @Original_Id_Consulta)));
+SELECT ID, Nombre, Precio, Comision_PorVenta, Id_Consulta FROM Procederes WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Nombre" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Precio" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Precio" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Comision_PorVenta" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Comision_PorVenta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Nombre" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Nombre" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Precio" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Precio" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_Precio" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Precio" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Comision_PorVenta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Comision_PorVenta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_Comision_PorVenta" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Comision_PorVenta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="CAMI.dbo.Procederes" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="Precio" DataSetColumn="Precio" />
+              <Mapping SourceColumn="Comision_PorVenta" DataSetColumn="Comision_PorVenta" />
+              <Mapping SourceColumn="Id_Consulta" DataSetColumn="Id_Consulta" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Procederes_ConsultaTableAdapter" GeneratorDataComponentClassName="Procederes_ConsultaTableAdapter" Name="Procederes_Consulta" UserDataComponentName="Procederes_ConsultaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CAMIConnectionString (Settings)" DbObjectName="CAMI.dbo.Procederes_Consulta" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Procederes_Consulta] WHERE (([Id] = @Original_Id) AND ([Id_Procederes] = @Original_Id_Procederes) AND ([Id_Consulta] = @Original_Id_Consulta))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_Procederes" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Procederes" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Procederes_Consulta] ([Id_Procederes], [Id_Consulta]) VALUES (@Id_Procederes, @Id_Consulta);
+SELECT Id, Id_Procederes, Id_Consulta FROM Procederes_Consulta WHERE (Id = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_Procederes" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Procederes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id, Id_Procederes, Id_Consulta FROM dbo.Procederes_Consulta</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Procederes_Consulta] SET [Id_Procederes] = @Id_Procederes, [Id_Consulta] = @Id_Consulta WHERE (([Id] = @Original_Id) AND ([Id_Procederes] = @Original_Id_Procederes) AND ([Id_Consulta] = @Original_Id_Consulta));
+SELECT Id, Id_Procederes, Id_Consulta FROM Procederes_Consulta WHERE (Id = @Id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_Procederes" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Procederes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_Procederes" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Procederes" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_Consulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_Consulta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="CAMI.dbo.Procederes_Consulta" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Id_Procederes" DataSetColumn="Id_Procederes" />
+              <Mapping SourceColumn="Id_Consulta" DataSetColumn="Id_Consulta" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="testTableAdapter" GeneratorDataComponentClassName="testTableAdapter" Name="test" UserDataComponentName="testTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CAMIConnectionString (Settings)" DbObjectName="CAMI.dbo.test" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[test] WHERE (([id] = @Original_id) AND ((@IsNull_aa = 1 AND [aa] IS NULL) OR ([aa] = @Original_aa)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_aa" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="aa" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_aa" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="aa" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[test] ([aa]) VALUES (@aa);
+SELECT id, aa FROM test WHERE (id = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@aa" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="aa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, aa FROM dbo.test</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[test] SET [aa] = @aa WHERE (([id] = @Original_id) AND ((@IsNull_aa = 1 AND [aa] IS NULL) OR ([aa] = @Original_aa)));
+SELECT id, aa FROM test WHERE (id = @id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@aa" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="aa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_aa" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="aa" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_aa" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="aa" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="id" DataSourceName="CAMI.dbo.test" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="aa" DataSetColumn="aa" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Tipo_ConsultaTableAdapter" GeneratorDataComponentClassName="Tipo_ConsultaTableAdapter" Name="Tipo_Consulta" UserDataComponentName="Tipo_ConsultaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CAMIConnectionString (Settings)" DbObjectName="CAMI.dbo.Tipo_Consulta" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Tipo_Consulta] WHERE (([ID] = @Original_ID) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Precio = 1 AND [Precio] IS NULL) OR ([Precio] = @Original_Precio)) AND ((@IsNull_Comision = 1 AND [Comision] IS NULL) OR ([Comision] = @Original_Comision)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Nombre" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Nombre" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Precio" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Precio" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_Precio" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Precio" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Comision" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Comision" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_Comision" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Comision" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Tipo_Consulta] ([Nombre], [Precio], [Comision]) VALUES (@Nombre, @Precio, @Comision);
+SELECT ID, Nombre, Precio, Comision FROM Tipo_Consulta WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Nombre" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Precio" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Precio" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Comision" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Comision" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Nombre, Precio, Comision FROM dbo.Tipo_Consulta</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Tipo_Consulta] SET [Nombre] = @Nombre, [Precio] = @Precio, [Comision] = @Comision WHERE (([ID] = @Original_ID) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Precio = 1 AND [Precio] IS NULL) OR ([Precio] = @Original_Precio)) AND ((@IsNull_Comision = 1 AND [Comision] IS NULL) OR ([Comision] = @Original_Comision)));
+SELECT ID, Nombre, Precio, Comision FROM Tipo_Consulta WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Nombre" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Precio" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Precio" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Comision" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Comision" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Nombre" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Nombre" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Precio" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Precio" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_Precio" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Precio" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Comision" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Comision" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_Comision" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Comision" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="CAMI.dbo.Tipo_Consulta" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="Precio" DataSetColumn="Precio" />
+              <Mapping SourceColumn="Comision" DataSetColumn="Comision" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UsuariosTableAdapter" GeneratorDataComponentClassName="UsuariosTableAdapter" Name="Usuarios" UserDataComponentName="UsuariosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CAMIConnectionString (Settings)" DbObjectName="CAMI.dbo.Usuarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Usuarios] WHERE (([ID] = @Original_ID) AND ((@IsNull_Titulo = 1 AND [Titulo] IS NULL) OR ([Titulo] = @Original_Titulo)) AND ((@IsNull_Nombres = 1 AND [Nombres] IS NULL) OR ([Nombres] = @Original_Nombres)) AND ((@IsNull_Apellidos = 1 AND [Apellidos] IS NULL) OR ([Apellidos] = @Original_Apellidos)) AND ((@IsNull_Usuario = 1 AND [Usuario] IS NULL) OR ([Usuario] = @Original_Usuario)) AND ((@IsNull_Password = 1 AND [Password] IS NULL) OR ([Password] = @Original_Password)) AND ((@IsNull_Edad = 1 AND [Edad] IS NULL) OR ([Edad] = @Original_Edad)) AND ((@IsNull_Sexo = 1 AND [Sexo] IS NULL) OR ([Sexo] = @Original_Sexo)) AND ((@IsNull_Cedula = 1 AND [Cedula] IS NULL) OR ([Cedula] = @Original_Cedula)) AND ((@IsNull_Pasaporte = 1 AND [Pasaporte] IS NULL) OR ([Pasaporte] = @Original_Pasaporte)) AND ((@IsNull_Mail = 1 AND [Mail] IS NULL) OR ([Mail] = @Original_Mail)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Titulo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Titulo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Titulo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Titulo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Nombres" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Nombres" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Nombres" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Nombres" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Apellidos" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Apellidos" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Apellidos" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Apellidos" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Usuario" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Usuario" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Usuario" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Usuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Password" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Password" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Password" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Password" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Edad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Edad" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Edad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Edad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Sexo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Sexo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Sexo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Sexo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Cedula" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cedula" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Cedula" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Cedula" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Pasaporte" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Pasaporte" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Pasaporte" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Pasaporte" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Mail" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Mail" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Mail" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Mail" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Usuarios] ([Titulo], [Nombres], [Apellidos], [Usuario], [Password], [Edad], [Sexo], [Cedula], [Pasaporte], [Mail]) VALUES (@Titulo, @Nombres, @Apellidos, @Usuario, @Password, @Edad, @Sexo, @Cedula, @Pasaporte, @Mail);
+SELECT ID, Titulo, Nombres, Apellidos, Usuario, Password, Edad, Sexo, Cedula, Pasaporte, Mail FROM Usuarios WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Titulo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Titulo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Nombres" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Nombres" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Apellidos" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Apellidos" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Usuario" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Usuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Password" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Password" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Edad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Edad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Sexo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Sexo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Cedula" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Cedula" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Pasaporte" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Pasaporte" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Mail" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Mail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Titulo, Nombres, Apellidos, Usuario, Password, Edad, Sexo, Cedula, Pasaporte, Mail FROM dbo.Usuarios</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Usuarios] SET [Titulo] = @Titulo, [Nombres] = @Nombres, [Apellidos] = @Apellidos, [Usuario] = @Usuario, [Password] = @Password, [Edad] = @Edad, [Sexo] = @Sexo, [Cedula] = @Cedula, [Pasaporte] = @Pasaporte, [Mail] = @Mail WHERE (([ID] = @Original_ID) AND ((@IsNull_Titulo = 1 AND [Titulo] IS NULL) OR ([Titulo] = @Original_Titulo)) AND ((@IsNull_Nombres = 1 AND [Nombres] IS NULL) OR ([Nombres] = @Original_Nombres)) AND ((@IsNull_Apellidos = 1 AND [Apellidos] IS NULL) OR ([Apellidos] = @Original_Apellidos)) AND ((@IsNull_Usuario = 1 AND [Usuario] IS NULL) OR ([Usuario] = @Original_Usuario)) AND ((@IsNull_Password = 1 AND [Password] IS NULL) OR ([Password] = @Original_Password)) AND ((@IsNull_Edad = 1 AND [Edad] IS NULL) OR ([Edad] = @Original_Edad)) AND ((@IsNull_Sexo = 1 AND [Sexo] IS NULL) OR ([Sexo] = @Original_Sexo)) AND ((@IsNull_Cedula = 1 AND [Cedula] IS NULL) OR ([Cedula] = @Original_Cedula)) AND ((@IsNull_Pasaporte = 1 AND [Pasaporte] IS NULL) OR ([Pasaporte] = @Original_Pasaporte)) AND ((@IsNull_Mail = 1 AND [Mail] IS NULL) OR ([Mail] = @Original_Mail)));
+SELECT ID, Titulo, Nombres, Apellidos, Usuario, Password, Edad, Sexo, Cedula, Pasaporte, Mail FROM Usuarios WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Titulo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Titulo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Nombres" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Nombres" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Apellidos" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Apellidos" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Usuario" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Usuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Password" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Password" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Edad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Edad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Sexo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Sexo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Cedula" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Cedula" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Pasaporte" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Pasaporte" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Mail" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Mail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Titulo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Titulo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Titulo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Titulo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Nombres" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Nombres" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Nombres" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Nombres" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Apellidos" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Apellidos" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Apellidos" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Apellidos" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Usuario" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Usuario" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Usuario" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Usuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Password" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Password" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Password" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Password" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Edad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Edad" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Edad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Edad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Sexo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Sexo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Sexo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Sexo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Cedula" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cedula" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Cedula" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Cedula" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Pasaporte" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Pasaporte" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Pasaporte" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Pasaporte" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Mail" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Mail" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Mail" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Mail" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="CAMI.dbo.Usuarios" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Titulo" DataSetColumn="Titulo" />
+              <Mapping SourceColumn="Nombres" DataSetColumn="Nombres" />
+              <Mapping SourceColumn="Apellidos" DataSetColumn="Apellidos" />
+              <Mapping SourceColumn="Usuario" DataSetColumn="Usuario" />
+              <Mapping SourceColumn="Password" DataSetColumn="Password" />
+              <Mapping SourceColumn="Edad" DataSetColumn="Edad" />
+              <Mapping SourceColumn="Sexo" DataSetColumn="Sexo" />
+              <Mapping SourceColumn="Cedula" DataSetColumn="Cedula" />
+              <Mapping SourceColumn="Pasaporte" DataSetColumn="Pasaporte" />
+              <Mapping SourceColumn="Mail" DataSetColumn="Mail" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CAMIDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CAMIDataSet" msprop:Generator_UserDSName="CAMIDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Consulta_View" msprop:Generator_TableClassName="Consulta_ViewDataTable" msprop:Generator_TableVarName="tableConsulta_View" msprop:Generator_TablePropName="Consulta_View" msprop:Generator_RowDeletingName="Consulta_ViewRowDeleting" msprop:Generator_RowChangingName="Consulta_ViewRowChanging" msprop:Generator_RowEvHandlerName="Consulta_ViewRowChangeEventHandler" msprop:Generator_RowDeletedName="Consulta_ViewRowDeleted" msprop:Generator_UserTableName="Consulta_View" msprop:Generator_RowChangedName="Consulta_ViewRowChanged" msprop:Generator_RowEvArgName="Consulta_ViewRowChangeEvent" msprop:Generator_RowClassName="Consulta_ViewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tipo_Consulta" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTipo_Consulta" msprop:Generator_ColumnPropNameInRow="Tipo_Consulta" msprop:Generator_ColumnPropNameInTable="Tipo_ConsultaColumn" msprop:Generator_UserColumnName="Tipo_Consulta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Numero_Factura" msprop:Generator_ColumnVarNameInTable="columnNumero_Factura" msprop:Generator_ColumnPropNameInRow="Numero_Factura" msprop:Generator_ColumnPropNameInTable="Numero_FacturaColumn" msprop:Generator_UserColumnName="Numero_Factura" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PrecioTotalConsulta" msprop:Generator_ColumnVarNameInTable="columnPrecioTotalConsulta" msprop:Generator_ColumnPropNameInRow="PrecioTotalConsulta" msprop:Generator_ColumnPropNameInTable="PrecioTotalConsultaColumn" msprop:Generator_UserColumnName="PrecioTotalConsulta" type="xs:double" minOccurs="0" />
+              <xs:element name="Historia_Clinica" msprop:Generator_ColumnVarNameInTable="columnHistoria_Clinica" msprop:Generator_ColumnPropNameInRow="Historia_Clinica" msprop:Generator_ColumnPropNameInTable="Historia_ClinicaColumn" msprop:Generator_UserColumnName="Historia_Clinica" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Paciente_Cedula" msprop:Generator_ColumnVarNameInTable="columnPaciente_Cedula" msprop:Generator_ColumnPropNameInRow="Paciente_Cedula" msprop:Generator_ColumnPropNameInTable="Paciente_CedulaColumn" msprop:Generator_UserColumnName="Paciente_Cedula">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Paciente_Telefono" msprop:Generator_ColumnVarNameInTable="columnPaciente_Telefono" msprop:Generator_ColumnPropNameInRow="Paciente_Telefono" msprop:Generator_ColumnPropNameInTable="Paciente_TelefonoColumn" msprop:Generator_UserColumnName="Paciente_Telefono" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Paciente_Edad" msprop:Generator_ColumnVarNameInTable="columnPaciente_Edad" msprop:Generator_ColumnPropNameInRow="Paciente_Edad" msprop:Generator_ColumnPropNameInTable="Paciente_EdadColumn" msprop:Generator_UserColumnName="Paciente_Edad" type="xs:int" minOccurs="0" />
+              <xs:element name="Paciente" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPaciente" msprop:Generator_ColumnPropNameInRow="Paciente" msprop:Generator_ColumnPropNameInTable="PacienteColumn" msprop:Generator_UserColumnName="Paciente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="511" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Usuario" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnUsuario" msprop:Generator_ColumnPropNameInRow="Usuario" msprop:Generator_ColumnPropNameInTable="UsuarioColumn" msprop:Generator_UserColumnName="Usuario" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="768" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IdentificadorConsulta" msprop:Generator_ColumnVarNameInTable="columnIdentificadorConsulta" msprop:Generator_ColumnPropNameInRow="IdentificadorConsulta" msprop:Generator_ColumnPropNameInTable="IdentificadorConsultaColumn" msprop:Generator_UserColumnName="IdentificadorConsulta" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Consulta" msprop:Generator_TableClassName="ConsultaDataTable" msprop:Generator_TableVarName="tableConsulta" msprop:Generator_TablePropName="Consulta" msprop:Generator_RowDeletingName="ConsultaRowDeleting" msprop:Generator_RowChangingName="ConsultaRowChanging" msprop:Generator_RowEvHandlerName="ConsultaRowChangeEventHandler" msprop:Generator_RowDeletedName="ConsultaRowDeleted" msprop:Generator_UserTableName="Consulta" msprop:Generator_RowChangedName="ConsultaRowChanged" msprop:Generator_RowEvArgName="ConsultaRowChangeEvent" msprop:Generator_RowClassName="ConsultaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Tipo_Consulta" msprop:Generator_ColumnVarNameInTable="columnTipo_Consulta" msprop:Generator_ColumnPropNameInRow="Tipo_Consulta" msprop:Generator_ColumnPropNameInTable="Tipo_ConsultaColumn" msprop:Generator_UserColumnName="Tipo_Consulta" type="xs:int" minOccurs="0" />
+              <xs:element name="Numero_Factura" msprop:Generator_ColumnVarNameInTable="columnNumero_Factura" msprop:Generator_ColumnPropNameInRow="Numero_Factura" msprop:Generator_ColumnPropNameInTable="Numero_FacturaColumn" msprop:Generator_UserColumnName="Numero_Factura" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Observaciones" msprop:Generator_ColumnVarNameInTable="columnObservaciones" msprop:Generator_ColumnPropNameInRow="Observaciones" msprop:Generator_ColumnPropNameInTable="ObservacionesColumn" msprop:Generator_UserColumnName="Observaciones" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Id_Usuario" msprop:Generator_ColumnVarNameInTable="columnId_Usuario" msprop:Generator_ColumnPropNameInRow="Id_Usuario" msprop:Generator_ColumnPropNameInTable="Id_UsuarioColumn" msprop:Generator_UserColumnName="Id_Usuario" type="xs:int" minOccurs="0" />
+              <xs:element name="PrecioTotalConsulta" msprop:Generator_ColumnVarNameInTable="columnPrecioTotalConsulta" msprop:Generator_ColumnPropNameInRow="PrecioTotalConsulta" msprop:Generator_ColumnPropNameInTable="PrecioTotalConsultaColumn" msprop:Generator_UserColumnName="PrecioTotalConsulta" type="xs:double" minOccurs="0" />
+              <xs:element name="Historia_Clinica" msprop:Generator_ColumnVarNameInTable="columnHistoria_Clinica" msprop:Generator_ColumnPropNameInRow="Historia_Clinica" msprop:Generator_ColumnPropNameInTable="Historia_ClinicaColumn" msprop:Generator_UserColumnName="Historia_Clinica" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Medicamentos" msprop:Generator_TableClassName="MedicamentosDataTable" msprop:Generator_TableVarName="tableMedicamentos" msprop:Generator_TablePropName="Medicamentos" msprop:Generator_RowDeletingName="MedicamentosRowDeleting" msprop:Generator_RowChangingName="MedicamentosRowChanging" msprop:Generator_RowEvHandlerName="MedicamentosRowChangeEventHandler" msprop:Generator_RowDeletedName="MedicamentosRowDeleted" msprop:Generator_UserTableName="Medicamentos" msprop:Generator_RowChangedName="MedicamentosRowChanged" msprop:Generator_RowEvArgName="MedicamentosRowChangeEvent" msprop:Generator_RowClassName="MedicamentosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Precio" msprop:Generator_ColumnVarNameInTable="columnPrecio" msprop:Generator_ColumnPropNameInRow="Precio" msprop:Generator_ColumnPropNameInTable="PrecioColumn" msprop:Generator_UserColumnName="Precio" type="xs:double" minOccurs="0" />
+              <xs:element name="Comision_PorVenta" msprop:Generator_ColumnVarNameInTable="columnComision_PorVenta" msprop:Generator_ColumnPropNameInRow="Comision_PorVenta" msprop:Generator_ColumnPropNameInTable="Comision_PorVentaColumn" msprop:Generator_UserColumnName="Comision_PorVenta" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Medicamentos_Consulta" msprop:Generator_TableClassName="Medicamentos_ConsultaDataTable" msprop:Generator_TableVarName="tableMedicamentos_Consulta" msprop:Generator_TablePropName="Medicamentos_Consulta" msprop:Generator_RowDeletingName="Medicamentos_ConsultaRowDeleting" msprop:Generator_RowChangingName="Medicamentos_ConsultaRowChanging" msprop:Generator_RowEvHandlerName="Medicamentos_ConsultaRowChangeEventHandler" msprop:Generator_RowDeletedName="Medicamentos_ConsultaRowDeleted" msprop:Generator_UserTableName="Medicamentos_Consulta" msprop:Generator_RowChangedName="Medicamentos_ConsultaRowChanged" msprop:Generator_RowEvArgName="Medicamentos_ConsultaRowChangeEvent" msprop:Generator_RowClassName="Medicamentos_ConsultaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Id_Consulta" msprop:Generator_ColumnVarNameInTable="columnId_Consulta" msprop:Generator_ColumnPropNameInRow="Id_Consulta" msprop:Generator_ColumnPropNameInTable="Id_ConsultaColumn" msprop:Generator_UserColumnName="Id_Consulta" type="xs:int" minOccurs="0" />
+              <xs:element name="Id_Medicamento" msprop:Generator_ColumnVarNameInTable="columnId_Medicamento" msprop:Generator_ColumnPropNameInRow="Id_Medicamento" msprop:Generator_ColumnPropNameInTable="Id_MedicamentoColumn" msprop:Generator_UserColumnName="Id_Medicamento" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Paciente" msprop:Generator_TableClassName="PacienteDataTable" msprop:Generator_TableVarName="tablePaciente" msprop:Generator_TablePropName="Paciente" msprop:Generator_RowDeletingName="PacienteRowDeleting" msprop:Generator_RowChangingName="PacienteRowChanging" msprop:Generator_RowEvHandlerName="PacienteRowChangeEventHandler" msprop:Generator_RowDeletedName="PacienteRowDeleted" msprop:Generator_UserTableName="Paciente" msprop:Generator_RowChangedName="PacienteRowChanged" msprop:Generator_RowEvArgName="PacienteRowChangeEvent" msprop:Generator_RowClassName="PacienteRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cedula" msprop:Generator_ColumnVarNameInTable="columnCedula" msprop:Generator_ColumnPropNameInRow="Cedula" msprop:Generator_ColumnPropNameInTable="CedulaColumn" msprop:Generator_UserColumnName="Cedula">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombres" msprop:Generator_ColumnVarNameInTable="columnNombres" msprop:Generator_ColumnPropNameInRow="Nombres" msprop:Generator_ColumnPropNameInTable="NombresColumn" msprop:Generator_UserColumnName="Nombres" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apellidos" msprop:Generator_ColumnVarNameInTable="columnApellidos" msprop:Generator_ColumnPropNameInRow="Apellidos" msprop:Generator_ColumnPropNameInTable="ApellidosColumn" msprop:Generator_UserColumnName="Apellidos" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Telefono" msprop:Generator_ColumnVarNameInTable="columnTelefono" msprop:Generator_ColumnPropNameInRow="Telefono" msprop:Generator_ColumnPropNameInTable="TelefonoColumn" msprop:Generator_UserColumnName="Telefono" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Edad" msprop:Generator_ColumnVarNameInTable="columnEdad" msprop:Generator_ColumnPropNameInRow="Edad" msprop:Generator_ColumnPropNameInTable="EdadColumn" msprop:Generator_UserColumnName="Edad" type="xs:int" minOccurs="0" />
+              <xs:element name="Sexo" msprop:Generator_ColumnVarNameInTable="columnSexo" msprop:Generator_ColumnPropNameInRow="Sexo" msprop:Generator_ColumnPropNameInTable="SexoColumn" msprop:Generator_UserColumnName="Sexo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Id_Consulta" msprop:Generator_ColumnVarNameInTable="columnId_Consulta" msprop:Generator_ColumnPropNameInRow="Id_Consulta" msprop:Generator_ColumnPropNameInTable="Id_ConsultaColumn" msprop:Generator_UserColumnName="Id_Consulta" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Paciente_Agenda" msprop:Generator_TableClassName="Paciente_AgendaDataTable" msprop:Generator_TableVarName="tablePaciente_Agenda" msprop:Generator_TablePropName="Paciente_Agenda" msprop:Generator_RowDeletingName="Paciente_AgendaRowDeleting" msprop:Generator_RowChangingName="Paciente_AgendaRowChanging" msprop:Generator_RowEvHandlerName="Paciente_AgendaRowChangeEventHandler" msprop:Generator_RowDeletedName="Paciente_AgendaRowDeleted" msprop:Generator_UserTableName="Paciente_Agenda" msprop:Generator_RowChangedName="Paciente_AgendaRowChanged" msprop:Generator_RowEvArgName="Paciente_AgendaRowChangeEvent" msprop:Generator_RowClassName="Paciente_AgendaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Observacion" msprop:Generator_ColumnVarNameInTable="columnObservacion" msprop:Generator_ColumnPropNameInRow="Observacion" msprop:Generator_ColumnPropNameInTable="ObservacionColumn" msprop:Generator_UserColumnName="Observacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fecha_Reconsulta" msprop:Generator_ColumnVarNameInTable="columnFecha_Reconsulta" msprop:Generator_ColumnPropNameInRow="Fecha_Reconsulta" msprop:Generator_ColumnPropNameInTable="Fecha_ReconsultaColumn" msprop:Generator_UserColumnName="Fecha_Reconsulta" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Fecha_Notificacion" msprop:Generator_ColumnVarNameInTable="columnFecha_Notificacion" msprop:Generator_ColumnPropNameInRow="Fecha_Notificacion" msprop:Generator_ColumnPropNameInTable="Fecha_NotificacionColumn" msprop:Generator_UserColumnName="Fecha_Notificacion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Id_Paciente" msprop:Generator_ColumnVarNameInTable="columnId_Paciente" msprop:Generator_ColumnPropNameInRow="Id_Paciente" msprop:Generator_ColumnPropNameInTable="Id_PacienteColumn" msprop:Generator_UserColumnName="Id_Paciente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Paciente_Consulta" msprop:Generator_TableClassName="Paciente_ConsultaDataTable" msprop:Generator_TableVarName="tablePaciente_Consulta" msprop:Generator_TablePropName="Paciente_Consulta" msprop:Generator_RowDeletingName="Paciente_ConsultaRowDeleting" msprop:Generator_RowChangingName="Paciente_ConsultaRowChanging" msprop:Generator_RowEvHandlerName="Paciente_ConsultaRowChangeEventHandler" msprop:Generator_RowDeletedName="Paciente_ConsultaRowDeleted" msprop:Generator_UserTableName="Paciente_Consulta" msprop:Generator_RowChangedName="Paciente_ConsultaRowChanged" msprop:Generator_RowEvArgName="Paciente_ConsultaRowChangeEvent" msprop:Generator_RowClassName="Paciente_ConsultaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Id_Paciente" msprop:Generator_ColumnVarNameInTable="columnId_Paciente" msprop:Generator_ColumnPropNameInRow="Id_Paciente" msprop:Generator_ColumnPropNameInTable="Id_PacienteColumn" msprop:Generator_UserColumnName="Id_Paciente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Id_Consulta" msprop:Generator_ColumnVarNameInTable="columnId_Consulta" msprop:Generator_ColumnPropNameInRow="Id_Consulta" msprop:Generator_ColumnPropNameInTable="Id_ConsultaColumn" msprop:Generator_UserColumnName="Id_Consulta" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Procederes" msprop:Generator_TableClassName="ProcederesDataTable" msprop:Generator_TableVarName="tableProcederes" msprop:Generator_TablePropName="Procederes" msprop:Generator_RowDeletingName="ProcederesRowDeleting" msprop:Generator_RowChangingName="ProcederesRowChanging" msprop:Generator_RowEvHandlerName="ProcederesRowChangeEventHandler" msprop:Generator_RowDeletedName="ProcederesRowDeleted" msprop:Generator_UserTableName="Procederes" msprop:Generator_RowChangedName="ProcederesRowChanged" msprop:Generator_RowEvArgName="ProcederesRowChangeEvent" msprop:Generator_RowClassName="ProcederesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Precio" msprop:Generator_ColumnVarNameInTable="columnPrecio" msprop:Generator_ColumnPropNameInRow="Precio" msprop:Generator_ColumnPropNameInTable="PrecioColumn" msprop:Generator_UserColumnName="Precio" type="xs:double" minOccurs="0" />
+              <xs:element name="Comision_PorVenta" msprop:Generator_ColumnVarNameInTable="columnComision_PorVenta" msprop:Generator_ColumnPropNameInRow="Comision_PorVenta" msprop:Generator_ColumnPropNameInTable="Comision_PorVentaColumn" msprop:Generator_UserColumnName="Comision_PorVenta" type="xs:double" minOccurs="0" />
+              <xs:element name="Id_Consulta" msprop:Generator_ColumnVarNameInTable="columnId_Consulta" msprop:Generator_ColumnPropNameInRow="Id_Consulta" msprop:Generator_ColumnPropNameInTable="Id_ConsultaColumn" msprop:Generator_UserColumnName="Id_Consulta" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Procederes_Consulta" msprop:Generator_TableClassName="Procederes_ConsultaDataTable" msprop:Generator_TableVarName="tableProcederes_Consulta" msprop:Generator_TablePropName="Procederes_Consulta" msprop:Generator_RowDeletingName="Procederes_ConsultaRowDeleting" msprop:Generator_RowChangingName="Procederes_ConsultaRowChanging" msprop:Generator_RowEvHandlerName="Procederes_ConsultaRowChangeEventHandler" msprop:Generator_RowDeletedName="Procederes_ConsultaRowDeleted" msprop:Generator_UserTableName="Procederes_Consulta" msprop:Generator_RowChangedName="Procederes_ConsultaRowChanged" msprop:Generator_RowEvArgName="Procederes_ConsultaRowChangeEvent" msprop:Generator_RowClassName="Procederes_ConsultaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="Id_Procederes" msprop:Generator_ColumnVarNameInTable="columnId_Procederes" msprop:Generator_ColumnPropNameInRow="Id_Procederes" msprop:Generator_ColumnPropNameInTable="Id_ProcederesColumn" msprop:Generator_UserColumnName="Id_Procederes" type="xs:int" />
+              <xs:element name="Id_Consulta" msprop:Generator_ColumnVarNameInTable="columnId_Consulta" msprop:Generator_ColumnPropNameInRow="Id_Consulta" msprop:Generator_ColumnPropNameInTable="Id_ConsultaColumn" msprop:Generator_UserColumnName="Id_Consulta" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="test" msprop:Generator_TableClassName="testDataTable" msprop:Generator_TableVarName="tabletest" msprop:Generator_TablePropName="test" msprop:Generator_RowDeletingName="testRowDeleting" msprop:Generator_RowChangingName="testRowChanging" msprop:Generator_RowEvHandlerName="testRowChangeEventHandler" msprop:Generator_RowDeletedName="testRowDeleted" msprop:Generator_UserTableName="test" msprop:Generator_RowChangedName="testRowChanged" msprop:Generator_RowEvArgName="testRowChangeEvent" msprop:Generator_RowClassName="testRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="aa" msprop:Generator_ColumnVarNameInTable="columnaa" msprop:Generator_ColumnPropNameInRow="aa" msprop:Generator_ColumnPropNameInTable="aaColumn" msprop:Generator_UserColumnName="aa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Tipo_Consulta" msprop:Generator_TableClassName="Tipo_ConsultaDataTable" msprop:Generator_TableVarName="tableTipo_Consulta" msprop:Generator_TablePropName="Tipo_Consulta" msprop:Generator_RowDeletingName="Tipo_ConsultaRowDeleting" msprop:Generator_RowChangingName="Tipo_ConsultaRowChanging" msprop:Generator_RowEvHandlerName="Tipo_ConsultaRowChangeEventHandler" msprop:Generator_RowDeletedName="Tipo_ConsultaRowDeleted" msprop:Generator_UserTableName="Tipo_Consulta" msprop:Generator_RowChangedName="Tipo_ConsultaRowChanged" msprop:Generator_RowEvArgName="Tipo_ConsultaRowChangeEvent" msprop:Generator_RowClassName="Tipo_ConsultaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Precio" msprop:Generator_ColumnVarNameInTable="columnPrecio" msprop:Generator_ColumnPropNameInRow="Precio" msprop:Generator_ColumnPropNameInTable="PrecioColumn" msprop:Generator_UserColumnName="Precio" type="xs:double" minOccurs="0" />
+              <xs:element name="Comision" msprop:Generator_ColumnVarNameInTable="columnComision" msprop:Generator_ColumnPropNameInRow="Comision" msprop:Generator_ColumnPropNameInTable="ComisionColumn" msprop:Generator_UserColumnName="Comision" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Usuarios" msprop:Generator_TableClassName="UsuariosDataTable" msprop:Generator_TableVarName="tableUsuarios" msprop:Generator_TablePropName="Usuarios" msprop:Generator_RowDeletingName="UsuariosRowDeleting" msprop:Generator_RowChangingName="UsuariosRowChanging" msprop:Generator_RowEvHandlerName="UsuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuariosRowDeleted" msprop:Generator_UserTableName="Usuarios" msprop:Generator_RowChangedName="UsuariosRowChanged" msprop:Generator_RowEvArgName="UsuariosRowChangeEvent" msprop:Generator_RowClassName="UsuariosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Titulo" msprop:Generator_ColumnVarNameInTable="columnTitulo" msprop:Generator_ColumnPropNameInRow="Titulo" msprop:Generator_ColumnPropNameInTable="TituloColumn" msprop:Generator_UserColumnName="Titulo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombres" msprop:Generator_ColumnVarNameInTable="columnNombres" msprop:Generator_ColumnPropNameInRow="Nombres" msprop:Generator_ColumnPropNameInTable="NombresColumn" msprop:Generator_UserColumnName="Nombres" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apellidos" msprop:Generator_ColumnVarNameInTable="columnApellidos" msprop:Generator_ColumnPropNameInRow="Apellidos" msprop:Generator_ColumnPropNameInTable="ApellidosColumn" msprop:Generator_UserColumnName="Apellidos" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Usuario" msprop:Generator_ColumnVarNameInTable="columnUsuario" msprop:Generator_ColumnPropNameInRow="Usuario" msprop:Generator_ColumnPropNameInTable="UsuarioColumn" msprop:Generator_UserColumnName="Usuario" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Password" msprop:Generator_ColumnVarNameInTable="columnPassword" msprop:Generator_ColumnPropNameInRow="Password" msprop:Generator_ColumnPropNameInTable="PasswordColumn" msprop:Generator_UserColumnName="Password" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Edad" msprop:Generator_ColumnVarNameInTable="columnEdad" msprop:Generator_ColumnPropNameInRow="Edad" msprop:Generator_ColumnPropNameInTable="EdadColumn" msprop:Generator_UserColumnName="Edad" type="xs:int" minOccurs="0" />
+              <xs:element name="Sexo" msprop:Generator_ColumnVarNameInTable="columnSexo" msprop:Generator_ColumnPropNameInRow="Sexo" msprop:Generator_ColumnPropNameInTable="SexoColumn" msprop:Generator_UserColumnName="Sexo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cedula" msprop:Generator_ColumnVarNameInTable="columnCedula" msprop:Generator_ColumnPropNameInRow="Cedula" msprop:Generator_ColumnPropNameInTable="CedulaColumn" msprop:Generator_UserColumnName="Cedula" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pasaporte" msprop:Generator_ColumnVarNameInTable="columnPasaporte" msprop:Generator_ColumnPropNameInRow="Pasaporte" msprop:Generator_ColumnPropNameInTable="PasaporteColumn" msprop:Generator_UserColumnName="Pasaporte" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mail" msprop:Generator_ColumnVarNameInTable="columnMail" msprop:Generator_ColumnPropNameInRow="Mail" msprop:Generator_ColumnPropNameInTable="MailColumn" msprop:Generator_UserColumnName="Mail" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Consulta_View" />
+      <xs:field xpath="mstns:Paciente_Cedula" />
+    </xs:unique>
+    <xs:unique name="Consulta_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Consulta" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Medicamentos_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Medicamentos" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Medicamentos_Consulta_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Medicamentos_Consulta" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Paciente_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Paciente" />
+      <xs:field xpath="mstns:Cedula" />
+    </xs:unique>
+    <xs:unique name="Paciente_Agenda_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Paciente_Agenda" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Paciente_Consulta_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Paciente_Consulta" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Procederes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Procederes" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Procederes_Consulta_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Procederes_Consulta" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="test_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:test" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="Tipo_Consulta_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Tipo_Consulta" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Usuarios_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Usuarios" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_Medicamentos_Consulta_Consulta" msdata:parent="Consulta" msdata:child="Medicamentos_Consulta" msdata:parentkey="ID" msdata:childkey="Id_Consulta" msprop:Generator_UserChildTable="Medicamentos_Consulta" msprop:Generator_ChildPropName="GetMedicamentos_ConsultaRows" msprop:Generator_UserRelationName="FK_Medicamentos_Consulta_Consulta" msprop:Generator_ParentPropName="ConsultaRow" msprop:Generator_RelationVarName="relationFK_Medicamentos_Consulta_Consulta" msprop:Generator_UserParentTable="Consulta" />
+      <msdata:Relationship name="FK_Medicamentos_Consulta_Medicamentos" msdata:parent="Medicamentos" msdata:child="Medicamentos_Consulta" msdata:parentkey="ID" msdata:childkey="Id_Medicamento" msprop:Generator_UserChildTable="Medicamentos_Consulta" msprop:Generator_ChildPropName="GetMedicamentos_ConsultaRows" msprop:Generator_UserRelationName="FK_Medicamentos_Consulta_Medicamentos" msprop:Generator_ParentPropName="MedicamentosRow" msprop:Generator_RelationVarName="relationFK_Medicamentos_Consulta_Medicamentos" msprop:Generator_UserParentTable="Medicamentos" />
+      <msdata:Relationship name="FK_Paciente_Agenda_Paciente" msdata:parent="Paciente" msdata:child="Paciente_Agenda" msdata:parentkey="Cedula" msdata:childkey="Id_Paciente" msprop:Generator_UserChildTable="Paciente_Agenda" msprop:Generator_ChildPropName="GetPaciente_AgendaRows" msprop:Generator_UserRelationName="FK_Paciente_Agenda_Paciente" msprop:Generator_ParentPropName="PacienteRow" msprop:Generator_RelationVarName="relationFK_Paciente_Agenda_Paciente" msprop:Generator_UserParentTable="Paciente" />
+      <msdata:Relationship name="FK_Paciente_Consulta_Consulta" msdata:parent="Consulta" msdata:child="Paciente_Consulta" msdata:parentkey="ID" msdata:childkey="Id_Consulta" msprop:Generator_UserChildTable="Paciente_Consulta" msprop:Generator_ChildPropName="GetPaciente_ConsultaRows" msprop:Generator_UserRelationName="FK_Paciente_Consulta_Consulta" msprop:Generator_ParentPropName="ConsultaRow" msprop:Generator_RelationVarName="relationFK_Paciente_Consulta_Consulta" msprop:Generator_UserParentTable="Consulta" />
+      <msdata:Relationship name="FK_Paciente_Consulta_Paciente" msdata:parent="Paciente" msdata:child="Paciente_Consulta" msdata:parentkey="Cedula" msdata:childkey="Id_Paciente" msprop:Generator_UserChildTable="Paciente_Consulta" msprop:Generator_ChildPropName="GetPaciente_ConsultaRows" msprop:Generator_UserRelationName="FK_Paciente_Consulta_Paciente" msprop:Generator_ParentPropName="PacienteRow" msprop:Generator_RelationVarName="relationFK_Paciente_Consulta_Paciente" msprop:Generator_UserParentTable="Paciente" />
+      <msdata:Relationship name="FK_Procederes_Consulta_Consulta" msdata:parent="Consulta" msdata:child="Procederes_Consulta" msdata:parentkey="ID" msdata:childkey="Id_Consulta" msprop:Generator_UserChildTable="Procederes_Consulta" msprop:Generator_ChildPropName="GetProcederes_ConsultaRows" msprop:Generator_UserRelationName="FK_Procederes_Consulta_Consulta" msprop:Generator_ParentPropName="ConsultaRow" msprop:Generator_RelationVarName="relationFK_Procederes_Consulta_Consulta" msprop:Generator_UserParentTable="Consulta" />
+      <msdata:Relationship name="FK_Procederes_Consulta_Procederes" msdata:parent="Procederes" msdata:child="Procederes_Consulta" msdata:parentkey="ID" msdata:childkey="Id_Procederes" msprop:Generator_UserChildTable="Procederes_Consulta" msprop:Generator_ChildPropName="GetProcederes_ConsultaRows" msprop:Generator_UserRelationName="FK_Procederes_Consulta_Procederes" msprop:Generator_ParentPropName="ProcederesRow" msprop:Generator_RelationVarName="relationFK_Procederes_Consulta_Procederes" msprop:Generator_UserParentTable="Procederes" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
